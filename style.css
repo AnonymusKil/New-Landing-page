@@ -10,6 +10,9 @@ h1 {
 p{
   font-family: "Open Sans",sans-serif;
 }
+html{
+  overflow-x: hidden;
+}
 nav.mobile {
   display: flex;
   justify-content: space-between;
@@ -184,6 +187,7 @@ header {
   height: 60vh;
   text-align: center;
   background-attachment: fixed;
+  margin-top: 1rem;
 }
 .miceal-jac-2 {
   background: linear-gradient(to right, #00e0fe, #1107fe);
@@ -198,6 +202,55 @@ header {
 }
 .miceal-jac-2 i:hover{
   color: black;
+}
+.first-text-2{
+  text-align: center;
+  word-wrap: break-word;
+}
+.features-block__icon i{
+  font-size: 100px;
+  background: linear-gradient(to right, #00e0fe, #1107fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.features-block{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  word-wrap: break-word;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.achivement-container{
+  background: linear-gradient(
+      to bottom,
+      rgba(8, 65, 187, 0.8),
+      rgba(60, 141, 230, 0.8)
+    ),
+    url("img/cover_2.jpg"); /* Add your image URL */
+  background-size: cover; /* Cover entire container */
+  background-position: center; /* Center the background */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  height: 40vh;
+  text-align: center;
+  background-attachment: fixed;
+  margin-top: 1rem;
+}
+.achivement-side{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 auto; */
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* transform: translate(-50%,-50%); */
+}
+.achivement-side-icon{
+  font-size: 4rem;
+  color: white;
 }
 @media (min-width: 1024px) {
   nav.mobile {
@@ -239,5 +292,10 @@ header {
   .card-container img {
     width: 100%;
     max-width: 300px;
+  }
+  .features-block{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
   }
 }
