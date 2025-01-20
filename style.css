@@ -7,6 +7,9 @@ h1 {
   font-family: "Poppins", sans-serif;
   font-weight: bolder;
 }
+p{
+  font-family: "Open Sans",sans-serif;
+}
 nav.mobile {
   display: flex;
   justify-content: space-between;
@@ -19,6 +22,9 @@ nav.mobile {
   transition: all 0.3s ease-in-out;
   height: 2.8rem;
   padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   overflow: hidden;
   /* position: fixed; */
   ul {
@@ -56,6 +62,7 @@ nav.open {
 }
 .line i {
   border: 1px solid black;
+  font-size: 2rem;
 }
 header {
   display: none;
@@ -72,6 +79,7 @@ header {
   background-repeat: no-repeat; /* Prevent image repetition */
   height: 60vh;
   text-align: center;
+  background-attachment: fixed;
 }
 .text-conta {
   padding: 2rem;
@@ -133,13 +141,29 @@ header {
 .miceal-jackson {
   background: linear-gradient(to right, #00e0fe, #1107fe);
   border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
+  width: 95px;
+  height: 95px;
+  /* width: 4rem;
+  height: 4rem; */
   text-align: center;
   display: flex;
+  /* padding: 1rem; */
+  /* position: relative;
+  top: 10px; */
+  transform: translateY(-20%);
+  transition: transform 0.5s ease;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+
+/* .konami{
+  position: absolute;
+
+} */
+.miceal-jackson i {
+  font-size: 2rem;
+  color: white;
 }
 /* .konami{
     display: flex;
@@ -147,41 +171,73 @@ header {
     align-items: center;
     margin-top: auto;
 } */
+.container-2 {
+  background: linear-gradient(
+      to bottom,
+      rgba(8, 65, 187, 0.8),
+      rgba(60, 141, 230, 0.8)
+    ),
+    url("img/cover_3.jpg"); /* Add your image URL */
+  background-size: cover; /* Cover entire container */
+  background-position: center; /* Center the background */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  height: 60vh;
+  text-align: center;
+  background-attachment: fixed;
+}
+.miceal-jac-2 {
+  background: linear-gradient(to right, #00e0fe, #1107fe);
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  transition: transform 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.miceal-jac-2 i:hover{
+  color: black;
+}
 @media (min-width: 1024px) {
-    nav.mobile {
-      display: none;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      padding: 1rem 2rem;
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
-      background-color: white;
-      align-items: center;
-    }
-    header ul {
-      display: flex;
-      gap: 1rem;
-      list-style: none;
-    }
-    header a {
-      text-decoration: none;
-      transition: color 0.3s ease-in-out;
-      font-family: "Poppins", sans-serif;
-    }
-    header a:hover {
-      color: #ffd700;
-    }
-    .container {
-      height: 80vh;
-    }
-    .cards-container {
-      flex-direction: row;
-    }
-    .card-container img {
-      width: 100%;
-      max-width: 300px;
-    }
-
+  nav.mobile {
+    display: none;
   }
-  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  header ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  header a {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-family: "Poppins", sans-serif;
+  }
+  header a:hover {
+    color: #ffd700;
+  }
+  .container {
+    height: 80vh;
+  }
+  /* .container-2{
+    height: 80vh;
+  } */
+  .cards-container {
+    flex-direction: row;
+  }
+  .card-container img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
